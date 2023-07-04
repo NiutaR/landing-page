@@ -69,3 +69,36 @@
   });
   /* подключение и настрока плагина анимации */
 })(jQuery);
+
+
+function check(arr, num) {
+  //let arr = [10, 15, 3, 7];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === num) {
+        return true;
+      } 
+     
+    }
+  }
+  return false;
+}
+console.log(check([10, 15, 3, 7], 17));//true
+console.log(check([10, 15, 3, 7], 20));//false
+
+function sumDigits(num) {
+  /*for (let i = 0; i < num.length; i++) {
+    const = num[i] + num[i];
+    return result;
+  }
+  return result;*/
+  let str = num+"";
+  let sum = 0;
+  for(let i =0; i < str.length; i++ )
+  { sum += +str[i] } 
+  return sum; 
+
+}
+console.log(sumDigits(123));//6
+console.log(sumDigits(904)); //13
+console.log(sumDigits(3));// 3
